@@ -1,8 +1,9 @@
-﻿using System.Data.Entity;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using SwiftClinicModels;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace SwiftClinic.Models
 {
@@ -18,16 +19,18 @@ namespace SwiftClinic.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class SwiftClinicDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
+        public SwiftClinicDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 
-        public static ApplicationDbContext Create()
+        public DbSet<Audit> AuditRecords { get; set; }
+
+        public static SwiftClinicDbContext Create()
         {
-            return new ApplicationDbContext();
+            return new SwiftClinicDbContext();
         }
     }
 }

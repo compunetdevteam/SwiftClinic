@@ -78,6 +78,14 @@
             Abuja, Gombe, Imo, Jigawa, Kaduna, Kano, Katsina, Kebbi, Kogi, Kwara, Lagos, Nasarawa, Niger, Ogun, Ondo, Osun,
             Oyo, Plateau, Rivers, Sokoto, Taraba, Yobe, Zamfara
         }
+        public enum ServiceType
+        {
+            School_Fee = 1, Accepatance_Fee, Supplementary_List_Payment, Hostel_Application_Fee, Acommodation_Payment_Fee, Faculty_Fee, Department_Fee
+        }
+        public enum RemitaPaymentType
+        {
+            MasterCard = 1, Visa, Verve, PocketMoni, POS, BANK_BRANCH, BANK_INTERNET, REMITA_PAY, RRRGEN
+        }
 
     }
 

@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SwiftClinicModel;
-using SwiftClinicModels;
 
-namespace BinghamWebApp.Models
+namespace SwiftClinicModels
 {
     public class Referral
     {
-        public int ReferralID { get; set; }
+        public int ReferralId { get; set; }
 
         [Display(Name = "Date")]
         [Required(ErrorMessage = "The Date is required")]
@@ -20,7 +14,7 @@ namespace BinghamWebApp.Models
 
         [Display(Name = "From Clinic")]
         [Required(ErrorMessage = "Your Clinic name is required")]
-        public PopUp.Clinic FromClinic { get; set; }
+        public string FromDepartment { get; set; }
 
         [Display(Name = "Referring Doctor")]
         [Required(ErrorMessage = "Your Clinic name is required")]
@@ -28,11 +22,11 @@ namespace BinghamWebApp.Models
 
         [Display(Name = "To Clinic")]
         [Required(ErrorMessage = "Your Clinic name is required")]
-        public PopUp.Clinic ToClinic { get; set; }
+        public string ToDepartment { get; set; }
 
         [Display(Name = "Subject")]
         [Required(ErrorMessage = "Subject is required")]
-        [StringLength(25, ErrorMessage = "Treatment is too long")]        
+        [StringLength(25, ErrorMessage = "Treatment is too long")]
         public string Subject { get; set; }
 
         [Display(Name = "Remark / Special Instructions")]

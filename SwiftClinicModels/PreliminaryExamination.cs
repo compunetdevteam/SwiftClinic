@@ -9,7 +9,7 @@ namespace SwiftClinicModels
 
         [Display(Name = "Clinic Name")]
         [Required(ErrorMessage = "Your Clinic name is required")]
-        public PopUp.Clinic Clinic { get; set; }
+        public int DepartmentId { get; set; }
 
         [Display(Name = "Date")]
         [Required(ErrorMessage = "The Date is required")]
@@ -37,6 +37,7 @@ namespace SwiftClinicModels
         public virtual Patient Patient { get; set; }
 
         public virtual Staff Staff { get; set; }
+        public virtual Department Department { get; set; }
 
     }
 }

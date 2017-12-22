@@ -60,9 +60,11 @@
     <Compile Include="Antenatal.cs" />
     <Compile Include="Appointment.cs" />
     <Compile Include="AssignSpecialization.cs" />
+    <Compile Include="Audit.cs" />
     <Compile Include="Billing\BillCategory.cs" />
     <Compile Include="Billing\BillPayment.cs" />
     <Compile Include="Billing\BillType.cs" />
+    <Compile Include="Billing\RemitaPaymentLog.cs" />
     <Compile Include="BloodBank\BloodDonor.cs" />
     <Compile Include="BloodBank\BloodRequest.cs" />
     <Compile Include="BloodBank\DonationHistory.cs" />
@@ -73,12 +75,10 @@
     <Compile Include="Dischage.cs" />
     <Compile Include="Dosage.cs" />
     <Compile Include="Emergency.cs" />
-    <Compile Include="Laboratory.cs" />
     <Compile Include="Laboratory\LabReport.cs" />
     <Compile Include="Laboratory\LabTest.cs" />
     <Compile Include="Laboratory\LabTestCategory.cs" />
     <Compile Include="Laboratory\LabTestRequest.cs" />
-    <Compile Include="ManageViewModels.cs" />
     <Compile Include="Patient.cs" />
     <Compile Include="PatientAllergy.cs" />
     <Compile Include="PatientDiagnosis.cs" />
