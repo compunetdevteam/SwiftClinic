@@ -26,7 +26,7 @@ namespace SwiftClinicModels
 
         public bool IsDead { get; set; }
 
-
+        [Display(Name = "Registered By")]
         public virtual Staff Staff { get; set; }
 
         public virtual ICollection<Appointment> Appointments { get; set; }
@@ -36,6 +36,9 @@ namespace SwiftClinicModels
         public virtual ICollection<AssignBedSpace> AssignBedSpaces { get; set; }
         public virtual ICollection<PatientAllergy> PatientAllergies { get; set; }
         public virtual ICollection<Dischage> Dischages { get; set; }
+        public virtual ICollection<Antenatal> Antenatals { get; set; }
+        public virtual ICollection<PreliminaryExamination> PreliminaryExaminations { get; set; }
+
 
 
     }

@@ -50,7 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountType.cs" />
+    <Compile Include="HealthScheme.cs" />
     <Compile Include="Admission.cs" />
     <Compile Include="Allergy.cs" />
     <Compile Include="Allocation\AssignBedSpace.cs" />
@@ -101,7 +101,6 @@
     <Compile Include="Symptom.cs" />
     <Compile Include="ValidateFileAttribute.cs" />
     <Compile Include="WaitingList.cs" />
-    <Compile Include="Ward.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SwiftClinicModel.csproj" />

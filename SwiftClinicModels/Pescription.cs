@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SwiftClinicModels.Pharmacy;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace SwiftClinicModels
@@ -12,7 +13,7 @@ namespace SwiftClinicModels
         public int DrugId { get; set; }
 
         [Display(Name = "Drug Name")]
-        public String DrugName { get; set; }
+        public string DrugName { get; set; }
 
         public int DosageId { get; set; }
         public int Quantity { get; set; }
@@ -23,6 +24,8 @@ namespace SwiftClinicModels
         public DateTime Date { get; set; }
 
         public virtual ConsultantRecord ConsultantRecord { get; set; }
+        public virtual Dosage Dosage { get; set; }
+        public virtual Drug Drug { get; set; }
 
     }
 }

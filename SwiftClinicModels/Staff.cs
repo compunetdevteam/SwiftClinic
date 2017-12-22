@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using BinghamWebApp.Models;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -21,8 +22,10 @@ namespace SwiftClinicModels
 
         public virtual Department Department { get; set; }
         public virtual ICollection<ConsultantRecord> ConsultantRecords { get; set; }
+        public virtual ICollection<Appointment> Appointments { get; set; }
         public virtual ICollection<AssignSpecialization> AssignSpecialization { get; set; }
         public virtual ICollection<StaffAcademicHistory> StaffAcademicHistories { get; set; }
         public virtual ICollection<Dischage> Dischages { get; set; }
+        public virtual ICollection<PreliminaryExamination> PreliminaryExaminations { get; set; }
     }
 }

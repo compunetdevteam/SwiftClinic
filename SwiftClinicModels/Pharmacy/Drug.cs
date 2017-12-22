@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -6,9 +7,8 @@ namespace SwiftClinicModels.Pharmacy
 {
     public class Drug
     {
+        public int DrugId { get; set; }
         public int DrugCategoryId { get; set; }
-
-        public int CategoryId { get; set; }
 
         [Required(ErrorMessage = "An Drug Name is required")]
         [StringLength(160)]
@@ -67,5 +67,7 @@ namespace SwiftClinicModels.Pharmacy
         public int? StockQuantity { get; set; }
 
         public virtual DrugCategory DrugCategory { get; set; }
+        public virtual ICollection<Pescription> Pescriptions { get; set; }
+
     }
 }

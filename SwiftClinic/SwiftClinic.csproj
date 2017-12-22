@@ -213,6 +213,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712222249283_InitailCreate.cs" />
+    <Compile Include="Migrations\201712222249283_InitailCreate.Designer.cs">
+      <DependentUpon>201712222249283_InitailCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -318,6 +322,11 @@
       <Project>{2de83895-1752-40e7-82fa-9b50099d1a8f}</Project>
       <Name>SwiftClinicModels</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712222249283_InitailCreate.resx">
+      <DependentUpon>201712222249283_InitailCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -17,5 +17,7 @@ namespace SwiftClinicModels
         public string Description { get; set; }
         public virtual ICollection<Staff> Staff { get; set; }
         public virtual ICollection<Appointment> Appointments { get; set; }
+        public virtual ICollection<PreliminaryExamination> PreliminaryExaminations { get; set; }
+
     }
 }

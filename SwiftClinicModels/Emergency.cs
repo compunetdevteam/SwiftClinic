@@ -6,7 +6,7 @@ namespace SwiftClinicModels
     public class Emergency
     {
         public int EmergencyId { get; set; }
-      
+
         public string MaritalStatus { get; set; }
         public string Injury { get; set; }
         public string Detail { get; set; }
@@ -17,7 +17,7 @@ namespace SwiftClinicModels
         public string BBRelationship { get; set; }
 
         [Required]
-        public int PatientID { get; set; }
+        public string PatientNumber { get; set; }
 
         public virtual Patient Patient { get; set; }
     }

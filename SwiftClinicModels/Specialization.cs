@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SwiftClinicModels
@@ -13,6 +14,6 @@ namespace SwiftClinicModels
         [Index(IsUnique = true)]
         [MaxLength(200)]
         public string SpecializationName { get; set; }
-        public AssignSpecialization AssignSpecialization { get; set; }
+        public virtual ICollection<AssignSpecialization> AssignSpecialization { get; set; }
     }
 }
