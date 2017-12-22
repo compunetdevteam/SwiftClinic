@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftClinic", "SwiftClinic\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftClinic.Tests", "SwiftClinic.Tests\SwiftClinic.Tests.csproj", "{6DB38162-0EE9-40EE-8485-A8D6C46D19CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwiftClinicModels", "SwiftClinicModels\SwiftClinicModels.csproj", "{2DE83895-1752-40E7-82FA-9B50099D1A8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6DB38162-0EE9-40EE-8485-A8D6C46D19CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DB38162-0EE9-40EE-8485-A8D6C46D19CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DB38162-0EE9-40EE-8485-A8D6C46D19CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE83895-1752-40E7-82FA-9B50099D1A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE83895-1752-40E7-82FA-9B50099D1A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE83895-1752-40E7-82FA-9B50099D1A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE83895-1752-40E7-82FA-9B50099D1A8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
