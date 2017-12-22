@@ -1,6 +1,5 @@
 ﻿using BinghamWebApp.Models;
-using SwiftClinicModel;
-using System;
+using SwiftClinicModels.Allocation;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,11 +16,15 @@ namespace SwiftClinicModels
         [Display(Name = "Hospital Number")]
         [Key]
         public string PatientNumber { get; set; }
-      
+
 
         [Display(Name = "Tribe")]
         [Required(ErrorMessage = "Your Tribe is required")]
         public string Tribe { get; set; }
+
+        public string PatientType { get; set; }
+
+        public bool IsDead { get; set; }
 
 
         public virtual Staff Staff { get; set; }
@@ -29,8 +32,10 @@ namespace SwiftClinicModels
         public virtual ICollection<Appointment> Appointments { get; set; }
         public virtual ICollection<ConsultantRecord> ConsultantRecords { get; set; }
         public virtual ICollection<HealthScheme> HealthSchemes { get; set; }
-
         public virtual ICollection<Pescription> Pescriptions { get; set; }
+        public virtual ICollection<AssignBedSpace> AssignBedSpaces { get; set; }
+        public virtual ICollection<PatientAllergy> PatientAllergies { get; set; }
+        public virtual ICollection<Dischage> Dischages { get; set; }
 
 
     }

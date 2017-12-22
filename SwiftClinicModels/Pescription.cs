@@ -1,27 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
-using SwiftClinicModels;
 
-namespace BinghamWebApp.Models
+namespace SwiftClinicModels
 {
     public class Pescription
     {
-        public int PescriptionID { get; set; }
+        public int PescriptionId { get; set; }
 
-        public int PatientNumber { get; set; }
+        public int ConsultantRecordId { get; set; }
 
-        public string DrugName { get; set; }
+        public int DrugId { get; set; }
 
-        public string Dose { get; set; }
+        [Display(Name = "Drug Name")]
+        public String DrugName { get; set; }
+
+        public int DosageId { get; set; }
+        public int Quantity { get; set; }
+        public string DosageNote { get; set; }
 
         public string Duration { get; set; }
 
         public DateTime Date { get; set; }
-   
-        public virtual Patient Patients { get; set; }
+
+        public virtual ConsultantRecord ConsultantRecord { get; set; }
 
     }
 }

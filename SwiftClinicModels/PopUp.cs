@@ -4,26 +4,52 @@
     {
         public enum Gender
         {
-            Male, Female
+            Male, Female, Others
         }
         public enum Marital
         {
             Single, Married, Divorce, Others
         }
 
-        public enum BloodGroup
+        public enum PatientType
         {
-            A, AB, O, B
+            In_Patient, Out_Patient
         }
 
-        public enum Clinic
+        public enum StockStatus
         {
-            Eye, ENT, SOPD, MOPD, GIT, OPD, PHY, PAED
+            Add, Remove
         }
+        public enum Qualifications
+        {
+            SSCE,
+            NCE,
+            OND,
+            HND,
+            Degree,
+            Masters,
+            Dr,
+        }
+
+        public enum PMode
+        {
+            Cash, Remita, Internet_Banking, POS
+        }
+
 
         public enum SchemeName
         {
             NHIS
+        }
+
+        public enum Survival
+        {
+            Mother, Child, Both
+        }
+
+        public enum SurvivalRate
+        {
+            Before, During, After
         }
 
         public enum Role

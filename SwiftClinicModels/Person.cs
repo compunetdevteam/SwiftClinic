@@ -111,8 +111,6 @@ namespace SwiftClinicModels
 
     public abstract class Person2
     {
-        public string UserId { get; set; }
-
 
         [StringLength(50, ErrorMessage = "First name cannot be longer than 50 characters.")]
         [Display(Name = "First Name")]
@@ -136,7 +134,6 @@ namespace SwiftClinicModels
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
 
-        public string Relationship { get; set; }
 
         [Display(Name = "Full Name")]
         public string UserName => LastName + " " + FirstName;

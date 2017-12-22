@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SwiftClinicModels;
 
-namespace BinghamWebApp.Models
+namespace SwiftClinicModels
 {
     public class Admission
     {
         public int AdmissionID { get; set; }
-        
+
 
         public string Clinic { get; set; }
 
