@@ -208,6 +208,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -216,6 +217,10 @@
     <Compile Include="Migrations\201712222249283_InitailCreate.cs" />
     <Compile Include="Migrations\201712222249283_InitailCreate.Designer.cs">
       <DependentUpon>201712222249283_InitailCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802190959402_DisableStaffRequiredAttribute.cs" />
+    <Compile Include="Migrations\201802190959402_DisableStaffRequiredAttribute.Designer.cs">
+      <DependentUpon>201802190959402_DisableStaffRequiredAttribute.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -861,6 +866,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_LayoutLanding.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+    <Content Include="Views\Departments\Create.cshtml" />
+    <Content Include="Views\Departments\Delete.cshtml" />
+    <Content Include="Views\Departments\Details.cshtml" />
+    <Content Include="Views\Departments\Edit.cshtml" />
+    <Content Include="Views\Departments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -879,6 +889,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712222249283_InitailCreate.resx">
       <DependentUpon>201712222249283_InitailCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802190959402_DisableStaffRequiredAttribute.resx">
+      <DependentUpon>201802190959402_DisableStaffRequiredAttribute.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

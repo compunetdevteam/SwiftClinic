@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace SwiftClinic
 {
@@ -8,6 +7,20 @@ namespace SwiftClinic
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+
+
+            //////////// Start of Bundle for SwiftKlinic ///////////////////
+
+            bundles.Add(new StyleBundle("~/Login/css").Include(
+                "~/Content/AdminTemplate/css/bootstrap.min.css",
+                "~/Content/AdminTemplate/font-awesome/css/font-awesome.css",
+                "~/Content/AdminTemplate/css/animate.css",
+                "~/Content/AdminTemplate/css/style.css"));
+
+            //////////// End of Bundle for SwiftKlinic ///////////////////
+
+
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -26,6 +39,10 @@ namespace SwiftClinic
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+
+
+
         }
     }
 }

@@ -27,7 +27,7 @@ namespace SwiftClinicModels
         public decimal Weight { get; set; }
 
         [Display(Name = "Nurse in Charge")]
-        [Required]
+       // [Required]
         public string StaffNumber { get; set; }
 
         [Display(Name = "Patient ID")]

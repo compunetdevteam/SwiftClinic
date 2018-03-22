@@ -21,7 +21,7 @@ namespace BinghamWebApp.Models
         public DateTime AppointmentDate { get; set; }
 
         [Display(Name = "Doctor in Charge")]
-        [Required]
+       // [Required]
         public string StaffNumber { get; set; }
 
         [Display(Name = "Details")]

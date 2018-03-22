@@ -26,13 +26,16 @@ namespace SwiftClinic.Models
         {
         }
 
-        public DbSet<Audit> AuditRecords { get; set; }
+        public DbSet<Audit> AuditRecords { get; set; }  
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Staff> Staffs { get; set; }
+        public DbSet<Department> Departments { get; set; }
 
         public static SwiftClinicDbContext Create()
         {
             return new SwiftClinicDbContext();
         }
+
+       
     }
 }

@@ -19,7 +19,7 @@ namespace SwiftClinicModels
         public DateTime DateCreated { get; set; }
 
         [Display(Name = "Registered By")]
-        [Required]
+        //[Required]
         public string StaffNumber { get; set; }
 
         [Display(Name = "Patient ID")]

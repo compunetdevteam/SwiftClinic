@@ -12,7 +12,7 @@ namespace SwiftClinicModels
         public int StaffId { get; set; }
 
         [Key]
-        public int StaffNumber { get; set; }
+        public string StaffNumber { get; set; }
 
         public string Specialization { get; set; }
 

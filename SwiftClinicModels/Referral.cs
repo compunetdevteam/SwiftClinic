@@ -17,7 +17,7 @@ namespace SwiftClinicModels
         public string FromDepartment { get; set; }
 
         [Display(Name = "Referring Doctor")]
-        [Required(ErrorMessage = "Your Clinic name is required")]
+        //[Required(ErrorMessage = "Your Clinic name is required")]
         public string StaffNumber { get; set; }
 
         [Display(Name = "To Clinic")]

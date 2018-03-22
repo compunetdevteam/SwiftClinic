@@ -1,0 +1,182 @@
+﻿@model IEnumerable<SwiftClinicModels.Department>
+
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Content/AdminTemplate/css/plugins/dataTables/datatables.min.css" rel="stylesheet" />
+
+<h2>Index</h2>
+
+<div class="col-lg-4">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Modal form <small>Example of login in modal box</small></h5>
+            <div class="ibox-tools">
+                <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-wrench"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li>
+                        <a href="#">Config option 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Config option 2</a>
+                    </li>
+                </ul>
+                <a class="close-link">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+        <div class="ibox-content">
+            <div class="text-center">
+                <a data-toggle="modal" class="btn btn-primary" href="#modal-form">Form in simple modal box</a>
+            </div>
+            <div id="modal-form" class="modal fade" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-6 b-r">
+                                    <h3 class="m-t-none m-b">Sign in</h3>
+
+                                    <p>Sign in today for more expirience.</p>
+
+                                    <form role="form">
+                                        <div class="form-group"><label>Email</label> <input type="email" placeholder="Enter email" class="form-control"></div>
+                                        <div class="form-group"><label>Password</label> <input type="password" placeholder="Password" class="form-control"></div>
+                                        <div>
+                                            <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Log in</strong></button>
+                                            <label> <input type="checkbox" class="i-checks"> Remember me </label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h4>Not a member?</h4>
+                                    <p>You can create an account:</p>
+                                    <p class="text-center">
+                                        <a href="#"><i class="fa fa-sign-in big-icon"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>List of All Departments</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-wrench"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li>
+                                    <a href="#">Config option 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Config option 2</a>
+                                </li>
+                            </ul>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover dataTables-example" id="TableId">
+                                <thead>
+                                    <tr>
+                                        <th>Department Code</th>
+                                        <th>Department Name</th>
+                                        <th>Department Description</th>
+
+                                    </tr>
+                                </thead>
+
+                                <tfoot>
+                                    <tr>
+                                        <th>Department Code</th>
+                                        <th>Department Name</th>
+                                        <th>Description</th>
+
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts{
+
+        <script src="~/Content/AdminTemplate/js/plugins/dataTables/datatables.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#TableId').DataTable
+                    ({
+                        //"columnDefs": [
+                        //{
+                        //"width": "5%",
+                        //"targets": [0]
+                        //},
+                        //{
+                        //"className": "text-center custom-middle-align",
+                        //"targets": [0, 1,2]
+                        //}, ],
+                        "language":
+                        {
+                            "processing": "<div class='overlay custom-loader-background'><i class='fa fa-cog fa-spin custom-loader-color'></i></div>"
+                        },
+                        "processing": true,
+                        "serverSide": true,
+                        "ajax":
+                        {
+                            "url": "/Departments/GetData",
+                            "type": "POST",
+                            "dataType": "JSON"
+                        },
+                        "columns": [
+
+                            {
+                                "data": "DepartmentCode",
+                                "autoWidth": true
+                            },
+                            {
+                                "data": "DepartmentName",
+                                "autoWidth": true
+                            },
+                            {
+                                "data": "Description",
+                                "autoWidth": true
+                            },
+
+                            //{
+                            //    "data": "Mobile",
+                            //    "autoWidth": true
+                            //}
+                        ]
+                    });
+            });
+        </script>
+    }
+
+    }
